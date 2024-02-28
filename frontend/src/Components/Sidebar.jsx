@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 import { IoHomeSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
@@ -8,7 +8,7 @@ import { MdEditDocument } from "react-icons/md"
 import Logout from './Logout';
 
 const Sidebar = () => {
-    const authUser=false;
+    const authUser=true;
   return (
     <aside className='flex flex-col items-center min-w-12 sm:min-w-16 sticky top-0 left-0 h-screen py-8 border-r  overflow-y-auto bg-glass'>
           <nav className='h-full flex flex-col gap-6'>
@@ -55,7 +55,7 @@ const Sidebar = () => {
               )}
 
               {authUser&&(
-                <div className='flex flex-col mt-auto hover:bg-gray-600'>
+                <div className='flex flex-col mt-auto'>
                     <Logout size={22}/>
                 </div>
 
