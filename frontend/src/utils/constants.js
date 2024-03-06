@@ -1,5 +1,5 @@
 export const PROGRAMMING_LANGUAGES = {
-	JavaScript: "../../public/javascript.svg",
+	JavaScript: "/javascript.svg",
 	PytTypeScript: "/typescript.svg",
 	hon: "/python.svg",
 	Java: "/java.svg",

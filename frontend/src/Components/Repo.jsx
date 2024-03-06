@@ -3,9 +3,19 @@ import { FaCodeFork } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { formatDate } from "../utils/function";
 import { PROGRAMMING_LANGUAGES } from "../utils/constants";
+import toast from "react-hot-toast";
 
 const Repo = ({repo}) => {
     const formatedDate= formatDate(repo.created_at)
+    const handleCloneClick=async(repo)=>{
+        try{
+        await navigator.clipboard.writeText(repo.clone_url)
+        toast.success("Repository Clone Copied  ")
+        }
+        catch{
+            toast.error("Could'nt Clone Repository")
+        }
+    }
     return (
         <li className='mb-10 ms-7'>
             <span
@@ -38,6 +48,7 @@ const Repo = ({repo}) => {
                 <span
                     className='cursor-pointer bg-green-100 text-green-800 text-xs
 					font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1'
+                    onClick={()=>handleCloneClick(repo)}
                 >
                     <FaCopy /> Clone
                 </span>
