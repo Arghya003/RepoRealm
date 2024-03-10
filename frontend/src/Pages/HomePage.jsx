@@ -5,13 +5,17 @@ import ProfileInfo from '../Components/ProfileInfo'
 import Repos from '../Components/Repos'
 import toast from 'react-hot-toast'
 import Spinner from "../Components/Spinner"
+import { useAuthContext } from '../context/authContext'
 const HomePage = () => {
+  const {authUser}=useAuthContext();
   const [userProfile,setUserProfile]=useState(null);
   const[repos,setRepos]=useState([])
   const[loading,setLoading]=useState(false)
   const[sortType,setSortType]=useState("recent")
 
-  const getUserProfileRepos = useCallback(async (username="Arghya003") => {
+  const username=authUser.username;
+
+  const getUserProfileRepos = useCallback(async () => {
     setLoading(true)
     try {
       const res = await fetch(`http://localhost:4000/api/users/profile/${username}`);

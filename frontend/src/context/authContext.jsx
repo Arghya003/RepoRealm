@@ -8,11 +8,10 @@ export const useAuthContext = () => {
     return useContext(AuthContext);
 };
 
-
-
-export const AuthContextProvider=({children})=>{
+export const AuthContextProvider = ({ children }) => {
     const [authUser, setAuthUser] = useState(null);
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         const checkUserLoggedIn = async () => {
             setLoading(true);
@@ -28,9 +27,6 @@ export const AuthContextProvider=({children})=>{
         };
         checkUserLoggedIn();
     }, []);
-    return (
-        <AuthContext.Provider value={authUser, setAuthUser, loading}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
+
+    return <AuthContext.Provider value={{ authUser, setAuthUser, loading }}>{children}</AuthContext.Provider>;
+};
