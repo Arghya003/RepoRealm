@@ -42,7 +42,7 @@ const ProfileInfo = ({ userProfile }) => {
                             rel='noreferrer'
                             className='bg-glass font-medium w-full text-xs p-2 rounded-md cursor-pointer border border-blue-400 flex items-center gap-2'
                         >
-                            <FaEye size={16} />
+                            <FaEye size={12} />
                             View on Github
                         </a>
                     </div>
