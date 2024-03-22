@@ -1,4 +1,4 @@
-import { FaCodeBranch, FaCopy, FaRegStar } from "react-icons/fa";
+import {  FaCopy, FaRegStar } from "react-icons/fa";
 import { FaCodeFork } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { formatDate } from "../utils/function";
@@ -61,7 +61,9 @@ const Repo = ({repo}) => {
                 Released on {formatedDate}
             </time>
             <p className='mb-4 text-base font-normal text-gray-500'>{repo.description?repo.description.slice(0,500):"No Description Provided"}</p>
-           {PROGRAMMING_LANGUAGES[repo.length]?(<img src={PROGRAMMING_LANGUAGES[repo.length]} alt='Programming language icon' className='h-8' />):null}
+            {PROGRAMMING_LANGUAGES[repo.language] ? (
+                <img src={PROGRAMMING_LANGUAGES[repo.language]} alt='Programming language icon' className='h-8' />
+            ) : null}
            </li>
     );
 };

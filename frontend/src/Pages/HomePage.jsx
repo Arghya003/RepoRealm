@@ -13,9 +13,10 @@ const HomePage = () => {
   const[loading,setLoading]=useState(false)
   const[sortType,setSortType]=useState("recent")
 
-  const username=authUser.username;
+  
 
-  const getUserProfileRepos = useCallback(async () => {
+  const getUserProfileRepos = useCallback(async (username=authUser.username) => {
+   
     setLoading(true)
     try {
       const res = await fetch(`http://localhost:4000/api/users/profile/${username}`);
@@ -37,7 +38,7 @@ const HomePage = () => {
     finally {
       setLoading(false)
     }
-  },[])
+  },[authUser.username])
   useEffect(()=>{
      getUserProfileRepos();
   },[getUserProfileRepos])
