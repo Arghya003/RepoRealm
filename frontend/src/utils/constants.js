@@ -1,7 +1,7 @@
 export const PROGRAMMING_LANGUAGES = {
   JavaScript: "/frontend/public//javascript.svg",
   TypeScript: "/frontend/public/typescript.svg",
-  Python: "/frontend/public//python.svg",
+  Python: "/frontend/public/python.svg",
   Java: "/frontend/public//java.svg",
   "C++": "/frontend/public//c++.svg",
   Swift: "/frontend/public//swift.svg",
