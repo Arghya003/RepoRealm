@@ -15,7 +15,7 @@ const Sidebar = () => {
     <aside className='flex flex-col items-center min-w-12 sm:min-w-16 sticky top-0 left-0 h-screen py-8 border-r  overflow-y-auto bg-glass'>
           <nav className='h-full flex flex-col gap-6'>
             <Link to="/" className='flex justify-center'>
-                  <img src='../../public/logo.png' alt='RepoRealm Logo' className='w-10 h-10 hover:bg-gray-700 rounded-xl'/>
+                  <img src='../../public/github.svg' alt='RepoRealm Logo' className='w-10 h-10 hover:bg-gray-700 rounded-xl'/>
             </Link>
               <Link to='/' className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
 					hover:bg-gray-600' >

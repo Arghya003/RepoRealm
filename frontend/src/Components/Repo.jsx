@@ -6,6 +6,7 @@ import { PROGRAMMING_LANGUAGES } from "../utils/constants";
 import toast from "react-hot-toast";
 
 const Repo = ({repo}) => {
+    console.log(repo)
     const formatedDate= formatDate(repo.created_at)
     const handleCloneClick=async(repo)=>{
         try{
@@ -60,9 +61,10 @@ const Repo = ({repo}) => {
             >
                 Released on {formatedDate}
             </time>
+            
             <p className='mb-4 text-base font-normal text-gray-500'>{repo.description?repo.description.slice(0,500):"No Description Provided"}</p>
             {PROGRAMMING_LANGUAGES[repo.language] ? (
-                <img src={PROGRAMMING_LANGUAGES[repo.language]} alt='Programming language icon' className='h-8' />
+                <img src="../../public/code-box-svgrepo-com.svg"  alt='Programming language icon' className='h-8' />
             ) : null}
            </li>
     );
