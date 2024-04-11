@@ -1,0 +1,17 @@
+{
+  "name": "reporealm",
+  "version": "1.0.0",
+  "description": "Smart Git application made using MERN",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
+  }
+}
